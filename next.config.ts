@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
+// Next.js exports the Render site; the existing Sites build uses vite.config.ts.
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  trailingSlash: true,
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: weblynxhive
+    runtime: static
+    repo: https://github.com/kumailraza5/Weblynxhive
+    branch: main
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm run build:render
+    staticPublishPath: ./out
+    envVars:
+      - key: NODE_VERSION
+        value: 22.22.0
